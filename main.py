@@ -37,8 +37,8 @@ async def bot_message(message: types.Message):
         os.system("xdg-open /home/user/Видео/Beliver.mp4")
     if message.text=="Домой":
         await bot.send_message(message.from_user.id,"Главная",reply_markup=nav.mainMenu)
-    if message.text == "+":
-        os.system("/Pause.sh")
+    if message.text == "Пауза":
+        os.system("qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
 
 if __name__ == "__main__":
     executor.start_polling(dp,skip_updates= True)
