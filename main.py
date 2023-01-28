@@ -38,6 +38,7 @@ async def bot_message(mes: types.Message):
     if mes.text == "⏪":
         await bot.delete_message(mes.from_user.id, mes.message_id)
         os.system("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek int30:10000000")
+    # Побольше экран экран
     if mes.text == "↕️":
         await bot.delete_message(mes.from_user.id, mes.message_id)
         os.system("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.fullscreen")
