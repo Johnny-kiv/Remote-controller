@@ -14,9 +14,12 @@ btnChoice = KeyboardButton("Выбрать фильм")
 # Отоброжение кнопок основного меню
 mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnM,btnP,btnF,btnN,btnPause,btnV,btnChoice)
 # Меню выбора фильма
-lis = os.listdir(path='<Ваша папка>')
-choiceMenu = InlineKeyboardMarkup(row_width=1)
-for i in lis:
-    choiceMenu.insert(InlineKeyboardButton(text=f"{i}",callback_data=f"/{i}"))
+def choice():
+    lis = os.listdir(path='/home/user/Видео')
+    choiceMenu = InlineKeyboardMarkup(row_width=1)
+    for i in lis:
+        choiceMenu.insert(InlineKeyboardButton(text=f"{i}",callback_data=f"/{i}"))
+    return choiceMenu
+
 
 
