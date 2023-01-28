@@ -20,7 +20,7 @@ async def command_start(mes: types.Message):
 @dp.message_handler()
 async def bot_message(mes: types.Message):
     global v
-    #Регулируем громкость
+    # Регулируем громкость
     if mes.text == "➕":
         await bot.delete_message(mes.from_user.id, mes.message_id)
         v += 2
@@ -31,7 +31,7 @@ async def bot_message(mes: types.Message):
         v -= 2
         os.system(f"amixer -c 0 set Master {v}%")
         await bot.send_message(admin, f"Громкость: {v}%", reply_markup=nav.mainMenu)
-    #Промотка вперед и назад
+    # Промотка вперед и назад
     if mes.text == "⏩":
         await bot.delete_message(mes.from_user.id, mes.message_id)
         os.system( "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek int64:10000000")
