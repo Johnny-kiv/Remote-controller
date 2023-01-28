@@ -42,9 +42,11 @@ async def bot_message(mes: types.Message):
     if mes.text == "↕️":
         await bot.delete_message(mes.from_user.id, mes.message_id)
         os.system("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.fullscreen")
+    # Выбор фильма
     if mes.text == "Выбрать фильм":
         await bot.delete_message(mes.from_user.id, mes.message_id)
         await bot.send_message(admin, "Выберете фильм", reply_markup=nav.choice())
+    #Пауза и пуск
     if mes.text == "⏯":
         os.system("qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
         await bot.delete_message(mes.from_user.id, mes.message_id)
