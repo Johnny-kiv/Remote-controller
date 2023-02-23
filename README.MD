@@ -18,6 +18,11 @@ bot_token = "<Your token>"
 ```
 admin = "<Your id>"
 ```
+<p>And choice your path with movies in murkup.py line 19</p>
+
+```
+lis = os.listdir(path='<your_path>')
+```
 <p>Close Pycharm.</p>
 <h3>Run</h3>
 <p>Open cmd or terminal and enter command</p>
