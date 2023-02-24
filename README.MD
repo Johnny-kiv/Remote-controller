@@ -1,4 +1,4 @@
-![logo.jpg](readme%2Flogo.jpg)
+![logo.png](readme%2Flogo.png)
 <h1>Remote controller</h1>
 <h2>Instruction</h2>
 <h3>Install</h3>
