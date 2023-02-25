@@ -8,7 +8,7 @@
 ```
 pip install aiogram
 ```
-<p>Create Telegram-Bot and enter token its in config.py:</p>
+<p><a href="https://botcreators.ru/blog/kak-sozdat-svoego-bota-v-botfather/">Create Telegram-Bot</a> and enter token its in config.py:</p>
 
 ```
 bot_token = "<Your token>"
