@@ -55,7 +55,7 @@ async def bot_message(mes: types.Message):
 
 @dp.callback_query_handler(text_contains="/")
 async def open_m(call: types.CallbackQuery):
-    os.system(f"xdg-open /home/user/Видео{call.data}")
+    os.system(f"xdg-open <path{call.data}>")
     await bot.send_message(admin, "Фильм включен. Приятного просмотра! 🙂", reply_markup=nav.mainMenu)
     await bot.delete_message(call.from_user.id,call.message.message_id)
 if __name__ == "__main__":

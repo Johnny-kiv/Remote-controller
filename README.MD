@@ -23,6 +23,11 @@ admin = "<Your id>"
 ```
 lis = os.listdir(path='<your_path>')
 ```
+<p>If you have windows then replace line 58 in main.py</p>
+
+```
+os.system(f"<path_to_your_player> <path_dir{call.data}>")
+```
 <p>Close Pycharm.</p>
 <h3>Run</h3>
 <p>Open cmd or terminal and enter command</p>
