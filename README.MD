@@ -13,7 +13,7 @@ pip install aiogram
 ```
 bot_token = "<Your token>"
 ```
-<p>Also write your id there:</p>
+<p>Also write <a href="https://t.me/getmyid_bot">your id</a> there:</p>
 
 ```
 admin = "<Your id>"
@@ -28,7 +28,11 @@ lis = os.listdir(path='<your_path>')
 ```
 os.system(f"<path_to_your_player> <path_dir{call.data}>")
 ```
-<p>If you have linux then change your_path in the same line</p>
+<p>If you have linux then change path to directory movies in the same line</p>
+
+```
+os.system(f"xdg-open <path{call.data}>")
+```
 <p>Close Pycharm.</p>
 <h3>Run</h3>
 <p>Open cmd or terminal and enter command</p>
