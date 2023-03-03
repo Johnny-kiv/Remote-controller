@@ -13,12 +13,12 @@ v = 80
 
 #Приветствие по команде старт
 @dp.message_handler(commands=['start'])
-async def command_start(mes: types.Message):
+async def command_start(mes: types.Message(admin)):
     await bot.send_message(mes.from_user.id, "Привет!", reply_markup=nav.mainMenu)
 
 
 @dp.message_handler()
-async def bot_message(mes: types.Message):
+async def bot_message(mes: types.Message(admin)):
     global v
     # Регулируем громкость
     if mes.text == "➕":
