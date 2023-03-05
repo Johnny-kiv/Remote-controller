@@ -2,7 +2,6 @@
 from tkinter import *
 from tkinter import ttk
 import os
-
 def show_message():
     config = open("config.py","w")
     tokenT = token.get()
