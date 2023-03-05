@@ -1,2 +1,2 @@
-bot_token = "<Your token>"
-admin = "<Your id>"
+bot_token = ""
+admin = ""
