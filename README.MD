@@ -11,16 +11,6 @@ pip install aiogram
 <p><a href="https://botcreators.ru/blog/kak-sozdat-svoego-bota-v-botfather/">Create Telegram-Bot</a> and enter token its in config.py:</p>
 
 ```
-bot_token = "<Your token>"
-```
-<p>Also write <a href="https://t.me/getmyid_bot">your id</a> there:</p>
-
-```
-admin = "<Your id>"
-```
-<p>And choice your path with movies in murkup.py line 19</p>
-
-```
 lis = os.listdir(path='<your_path>')
 ```
 <p>If you have windows then replace line 58 in main.py</p>
@@ -43,10 +33,10 @@ cd <path_to_remote_controller>
 <p>Allow right to execute</p>
 
 ```
-sudo chmod +x ./main.py
+sudo chmod +x ./App.py
 ```
 <p>Run main.py</p>
 
 ```
-./main.py
+./App.py
 ```
