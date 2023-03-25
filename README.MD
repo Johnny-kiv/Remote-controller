@@ -42,3 +42,4 @@ sudo chmod +x ./App.py
 ```
 Then you can enter bot token and your id:
  
+![res.png](readme%2Fres.png)
