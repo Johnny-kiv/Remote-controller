@@ -40,3 +40,5 @@ sudo chmod +x ./App.py
 ```
 ./App.py
 ```
+Then you can enter bot token and your id:
+ 
