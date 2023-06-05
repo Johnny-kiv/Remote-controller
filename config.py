@@ -1,2 +1,2 @@
-bot_token = ''
-admin = ''
+bot_token = '5991827487:AAG_5Tlh25lmxLI7UQXr6-negPR9J0B9Uug'
+admin = '1776334853'

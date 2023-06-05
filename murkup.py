@@ -15,7 +15,7 @@ btnChoice = KeyboardButton("Выбрать фильм")
 mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnM,btnP,btnF,btnN,btnPause,btnV,btnChoice)
 # Меню выбора фильма
 def choice():
-    lis = os.listdir(path='your_path')
+    lis = os.listdir(path='/home/user/Видео/')
     choiceMenu = InlineKeyboardMarkup(row_width=1)
     for i in lis:
         choiceMenu.insert(InlineKeyboardButton(text=f"{i}",callback_data=f"/{i}"))

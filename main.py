@@ -22,12 +22,14 @@ async def bot_message(mes: types.Message(admin)):
     global v
     # Регулируем громкость
     if mes.text == "➕":
-        await bot.delete_message(mes.from_user.id, mes.message_id)
+        await bot.delete_message(mes.from_user.id, mes.message_id-2)
+        await bot.delete_message(mes.from_user.id, mes.message_id-1)
         v += 2
         os.system(f"amixer -c 0 set Master {v}%")
         await bot.send_message(admin, f"Громкость: {v}%", reply_markup=nav.mainMenu)
     if mes.text == "➖":
-        await bot.delete_message(mes.from_user.id, mes.message_id)
+        await bot.delete_message(mes.from_user.id, mes.message_id-2)
+        await bot.delete_message(mes.from_user.id, mes.message_id-1)
         v -= 2
         os.system(f"amixer -c 0 set Master {v}%")
         await bot.send_message(admin, f"Громкость: {v}%", reply_markup=nav.mainMenu)
@@ -55,7 +57,7 @@ async def bot_message(mes: types.Message(admin)):
 
 @dp.callback_query_handler(text_contains="/")
 async def open_m(call: types.CallbackQuery):
-    os.system(f"xdg-open <path{call.data}>")
+    os.system(f"xdg-open /home/user/Видео{call.data}")
     await bot.send_message(admin, "Фильм включен. Приятного просмотра! 🙂", reply_markup=nav.mainMenu)
     await bot.delete_message(call.from_user.id,call.message.message_id)
 if __name__ == "__main__":
